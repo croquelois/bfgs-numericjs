@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+
+
+</style>
+<script src="numeric.js"></script>
+<script src="bfgs.js"></script>
+
+<script>
+ 
+function sqr(x){ return x*x; };
+function f(arg){
+  var x = arg[0];
+  var y = arg[1];
+  return sqr(10*(y-x*x)) + sqr(1-x);
+}
+
+function df(arg){
+  var ret = [];
+  var x = arg[0];
+  var y = arg[1];
+  var tmp = 200*(y-x*x);
+  ret[0] = -2*x*tmp - 2*(1-x)
+  ret[1] = tmp;
+  return ret;
+}
+
+var ret = numeric.bfgs([0,0],{f:f,df:df},1000,10e-16);
+console.log(ret);
+</script>
+
+</head>
+<body>
+<p>Check the console</p>
+</body>
+</html>
