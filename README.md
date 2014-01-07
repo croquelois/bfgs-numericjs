@@ -4,14 +4,24 @@ optimisation with bfgs, implemented using [numericjs] (http://www.numericjs.com)
 
 ##use:
 
+```js
 numeric.bfgs(guess,objective,maxIter,eps,opt);
+```
+
 guess: an array with your initial guess
+
 objective: an object with two attribute, 'f' your function to optimise and 'df' your derivative
+
 maxIter: number of iteration before to stop
+
 eps: if the norm of the gradient is below this level, stop
+
 opt: an optional argument with the following atributes:
+
 -maxTry: number of try in the linesearch step before to stop (default: 25)
+
 -c1: 1st wolfe condition parameter (default: 0.25)
+
 -c2: 2nd wolfe condition parameter (default: 0.75) 
 
 ##example
