@@ -16,7 +16,7 @@ function bfgs(guess,obj,maxIter,eps,opt){
   var opt = opt || {};
   var df = obj.df;
   var f = obj.f;
-  var B = numeric.identity(2);
+  var B = numeric.identity(guess.length);
   var x = guess.slice();
   var v = {x:x,f:f(x),df:df(x)};
 
