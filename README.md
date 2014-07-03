@@ -45,5 +45,5 @@ function df(arg){
   return ret;
 }
 
-var ret = numeric.bfgs([0,0],{f:f,df:df},1000,10e-16);
+var ret = bfgs([0,0],{f:f,df:df},1000,10e-16);
 ```
