@@ -1,0 +1,13 @@
+{
+  "name": "bfgs-numericjs",
+  "description": "Numeric optimization of a function with BFGS",
+  "main": "./bfgs.js",
+  "author": {
+    "name": "Matthieu Croquelois"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/croquelois/bfgs-numericjs.git"
+  },
+  "version": "0.1.0"
+}
